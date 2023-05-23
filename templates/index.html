@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="text-box">
+        <h1>Loan Risk Analysis</h1>
+        <p>Insert text about how to use app.</p>
+    </div>
+    <body>
+        <form method="POST" action="/">
+            <label for="user_input_1">Enter age:</label>
+            <input type="text" id="user_input_1" name="person_age">
+            <br>
+            <label for="user_input_2">Enter annual income:</label>
+            <input type="text" id="user_input_2" name="person_income">
+            <br>
+            <label for="user_input_3">Select home ownership status:</label>
+            <select id="user_input_3" name="person_home_ownership">
+                <option value="RENT">RENT</option>
+                <option value="MORTGAGE">MORTGAGE</option>
+                <option value="OWN">OWN</option>
+                <option value="OTHER">OTHER</option>
+            </select>
+            <br>
+            <label for="user_input_4">Enter years of employment:</label>
+            <input type="text" id="user_input_4" name="person_emp_length">
+            <br>
+            <label for="user_input_5">Select loan purpose:</label>
+            <select id="user_input_5" name="loan_intent">
+                <option value="PERSONAL">PERSONAL</option>
+                <option value="EDUCATION">EDUCATION</option>
+                <option value="MEDICAL">MEDICAL</option>
+                <option value="VENTURE">VENTURE</option>
+                <option value="HOMEIMPROVEMENT">HOME IMPROVEMENT</option>
+                <option value="DEBTCONSOLIDATION">DEBT CONSOLIDATION</option>
+            </select>
+            <br>
+            <label for="user_input_6">Enter loan amount in dollars:</label>
+            <input type="text" id="user_input_6" name="loan_amnt">
+            <br>
+            <label for="user_input_7">Enter estimated interest rate:</label>
+            <input type="text" id="user_input_7" name="loan_int_rate">
+            <br>
+            <label for="user_input_8">Enter loan percent of income:</label>
+            <input type="text" id="user_input_8" name="loan_percent_income">
+            <br>
+            <label for="user_input_9">Have you previously defaulted on a loan?</label>
+            <select id="user_input_9" name="cb_person_default_on_file">
+                <option value="0">YES</option>
+                <option value="1">NO</option>
+            </select>
+            <br>
+            <label for="user_input_10">Enter years of credit history:</label>
+            <input type="text" id="user_input_10" name="cb_person_cred_hist_length">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    {% if predictions %}
+    <h2>Predictions:</h2>
+    <ul>
+        {% for prediction in predictions %}
+        <li>{{ prediction }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
