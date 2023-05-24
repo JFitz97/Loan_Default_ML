@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 import pickle
+import os
 
 def dummy_variables(user_inputs):
     
@@ -91,8 +92,11 @@ def dummy_variables(user_inputs):
 #     return scaled_df
 
 def scaler(cred_df):
+ # Get the absolute path to the scaler.pkl file
+    scaler_path = os.path.join(os.path.dirname(__file__), "scaler.pkl")
+
     # Load the saved scaler from the pickle file
-    with open('scaler.pkl', 'rb') as f:
+    with open(scaler_path, 'rb') as f:
         scaler = pickle.load(f)
 
     # Scale the data using the loaded scaler

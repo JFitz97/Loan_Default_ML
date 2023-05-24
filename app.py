@@ -25,6 +25,7 @@ def home():
         print('hi')
         print(cred_df)
         pred = model.predict(scaler(cred_df))
+        print("prediction below:")
         print(pred)
 
         # Return the prediction to the user
