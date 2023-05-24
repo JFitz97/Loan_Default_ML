@@ -24,9 +24,11 @@ def home():
         cred_df = dummy_variables(user_inputs)
         print('hi')
         print(cred_df)
-        pred = model.predict(scaler(cred_df))
+        pred = str(model.predict(scaler(cred_df))[0])
+        prob = str(model.predict_proba(scaler(cred_df))[0])
         print("prediction below:")
         print(pred)
+        print(prob)
 
         # Return the prediction to the user
         return render_template('index.html', predictions=pred)
