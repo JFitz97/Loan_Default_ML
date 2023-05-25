@@ -2,9 +2,7 @@ Loan_Default_ML
 
 Tableau Link: 
 
-Team Members:
-
-Jack Fitzgerald, Mason Portman, Libby Berter, Svea Sharaf
+Team Members:  Jack Fitzgerald, Mason Portman, Libby Berter, Svea Sharaf
 
 Description:
 
