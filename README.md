@@ -1,6 +1,6 @@
 Loan_Default_ML
 
-Tableau Link: 
+Tableau Link:  https://public.tableau.com/app/profile/svea.sharaf/viz/Story1_16850515480180/Story1?publish=yes
 
 Team Members:  Jack Fitzgerald, Mason Portman, Libby Berter, Svea Sharaf
 
